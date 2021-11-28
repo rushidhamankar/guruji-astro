@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Astro Guruji Template</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+	<link rel="stylesheet" href="styles.css">
+	<style>
+		.consultation>h3 {
+			text-align: center;
+			margin: 60px 48px;
+		}
+
+		.cardcontainer>.card {
+			margin: 0px 14px;
+			border-radius: 16px;
+		}
+
+		.card-img-top {
+			border-radius: 16px 16px 0px 0px;
+			/* position: absolute; */
+		}
+
+		.card-img-container {
+
+			position: relative;
+		}
+
+		.card-img-container>.person {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border: 5px solid #e9d4ff96;
+			border-radius: 35px;
+		}
+
+		.card-body>.rating {
+			font-size: 12px;
+		}
+
+		div.rating-score>p>i {
+
+			color: #7C37FA;
+
+		}
+
+		div.consultation>div>div>div.card-body>h6 {
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 24px;
+			letter-spacing: 0px;
+			text-align: left;
+		}
+
+		.card-body>p {
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 16px;
+			letter-spacing: 0px;
+			text-align: left;
+			color: #707070;
+			margin-bottom: 5px;
+		}
+
+		.price {
+			font-size: 24px;
+		}
+
+		.original-price {
+			text-decoration: line-through;
+		}
+
+
+		.cardcontainer {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			margin: 72px 48px;
+			position: relative;
+		}
+
+		.back {
+
+			border-radius: 50%;
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			left: -5px;
+			display: flex;
+			top: 125px;
+			z-index: 2;
+			background: #FFFFFF;
+			box-shadow: 0px 2px 8px rgb(0 0 0 / 25%);
+			text-align: center;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
+		}
+
+
+		.see-more-button {
+			width: 184px;
+			margin: 0px 14px;
+
+		}
+
+		.see-more-button {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 0px;
+		}
+
+		.see-more-button>a {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			padding: 10px 24px;
+			background-color: white;
+			box-shadow: 0px 2px 8px 0px #00000040;
+			border-radius: 41px;
+			text-decoration: none;
+			color: #484848;
+		}
+
+		.see-more-button>a>i {
+			margin: 0px 4px;
+		}
+
+		/* satisfaction section  */
+
+		.media {
+			margin: 20px;
+			box-shadow: 0px 8px 24px 0px #0000001A;
+			padding: 32px 24px;
+			border-radius:16px;
+
+		}
+
+		.media img {
+			border-radius: 50%;
+		}
+
+		.fa-star {
+			color: #7C37FA;
+		}
+
+		div.satisfaction>div>div>div>div>p {
+			margin: 16px 0px;
+		}
+
+		.export-btn {
+			color: #7C37FA;
+		}
+
+		.btn-rounded {
+		  border-radius: 25px;
+		}
+
+		.centered-image {
+		  position: absolute;
+		  top: 25%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		}
+
+		.centered-image-2 {
+		  position: absolute;
+		  top: 75%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		}
+
+		.centered-image-1 {
+		  position: absolute;
+		  top: 75%;
+		  left: 15%;
+		  transform: translate(-50%, -50%);
+		}
+
+		.container-image {
+		  position: relative;
+		  text-align: center;
+		  color: white;
+		  min-width: 100%;
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<nav class="mb-1 navbar navbar-expand-lg ">
+	  <a class="navbar-brand" href="#">GURUJI &nbsp;&nbsp;&nbsp; Talk with astrologers</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+	    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+	    <ul class="navbar-nav ml-auto nav-flex-icons">
+	       <li class="nav-item">
+	       		<select class="browser-default custom-select">
+                  <option value="1">English</option>
+                  <option value="2">Hindi</option>
+                  <option value="3">Urdu</option>
+                </select>
+	      </li>
+	      <li class="nav-item">
+	        <span> &nbsp;&nbsp; <i class="fas fa-wallet" style="font-size: 24px;margin-top: 5px;"></i> <b>RS 200</b> </span>
+	      </li>
+	    
+	      <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+	          aria-haspopup="true" aria-expanded="false">
+	          <img src="Avatar.png" />
+	        </a>
+	        <div class="dropdown-menu dropdown-menu-right dropdown-default"
+	          aria-labelledby="navbarDropdownMenuLink-333">
+	          <a class="dropdown-item" href="#">Order History</a>
+	          <a class="dropdown-item" href="#">Recharge History</a>
+	          <a class="dropdown-item" href="#">Followed astrologer</a>
+	          <a class="dropdown-item" href="#">Account setting</a>
+	          <hr>
+	          <a class="dropdown-item" href="#">Log Out</a>
+	        </div>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+
+	<div class="container container-image container-fluid">
+		<img src="banner.png" alt="Snow" style="height: 500px;width: 100%;">
+		<div class="centered centered-image-1">
+			<button type="button" class="btn btn-dark btn-lg" data-mdb-ripple-color="dark">Talk Now</button>
+		</div>
+	</div>
+
+	<div class="card-body"> 
+		<h2 style="text-align: center" ><b>All the problem you can consult and get answer</b></h2>
+		<div style="text-align: center;" >
+			<button type="button" class="btn btn-light" data-mdb-ripple-color="dark" style="border-radius: 55px;">Scenario</button>
+			<button type="button" class="btn btn-dark" style="border-radius: 55px;">Consult Methods</button>
+		</div>
+		<div class="top-content card-body">
+	    	<div class="container-fluid">
+	        <div id="carousel-example" class="carousel slide" data-ride="carousel">
+	            <div class="carousel-inner row w-100 mx-auto" role="listbox">
+	                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+	                    <img src="Frame 1200.png" class="img-fluid mx-auto d-block" alt="img1">
+	                </div>
+	                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+	                    <img src="Frame 1201.png" class="img-fluid mx-auto d-block" alt="img2">
+	                </div>
+	                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+	                    <img src="Frame 1202.png" class="img-fluid mx-auto d-block" alt="img3">
+	                </div>
+	                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+	                    <img src="Frame 1203.png" class="img-fluid mx-auto d-block" alt="img4">
+	                </div>
+	                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+	                    <img src="Frame 1204.png" class="img-fluid mx-auto d-block" alt="img5">
+	                </div>
+	                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+	                    <img src="Frame 1205.png" class="img-fluid mx-auto d-block" alt="img6">
+	                </div>
+	            </div>
+	            <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+	                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	                <span class="sr-only">Previous</span>
+	            </a>
+	            <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+	                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	                <span class="sr-only">Next</span>
+	            </a>
+	        </div>
+	    	</div>
+		</div>
+	</div>
+
+
+	<div class="card-body" style="background-color: #f5f5f5"> 
+		<h2 style="text-align: center" ><b>Why Astrology？</b><i class="fa fa-arrow-circle-up" style="font-size:36px"></i></h2>
+		<h3 style="text-align: center">Astrology reveals the will of the God</h3>
+		<div class="row card-body" >
+			<p>
+				<h6>I want to speak like a native Japanese person. Learning a foreign language has been eye opening, so I want to further improve my Japanese skills. AmazingTalker is a flexible platform that lets me schedule my lessons for whenever I need, select tutors that fit my budget and needs, and even purchase a single lesson if I'd like. Don’t put off learning a new language！</h6><br><br><h6>I learn foreign languages to expand my future plans. Language learning lets me explore other interests and possibilities in my life. AmazingTalker is a student-oriented platform, where I can learn in my own pace. Tutors offer personalized courses based on my learning needs. Thanks to AmazingTalker, language learning has helped enrich my life.</h6>
+			</p>
+		</div>
+	</div>
+
+	<div class="card card-body" style="text-align: center;width:95%;margin:auto;margin-top:25px; ">
+		<h4><b>4 Reason why you should choose Guruji</b></h4>
+
+		<div class="row card-body justify-content-center" style="text-align: center;">
+			<div class="row" style="text-align: center;padding: 15px;padding-right: 25px;">
+				<div class="col-xs-4">
+					<img src="contract.png" style="width:100px;height: 100px;" >
+				</div>
+				<div class="col-xs-4 " style="width: 400px;text-align: left;">
+					<h4><b>800+ Outstanding astrologers</b></h4>
+					<h5>Verified and experience astrologersge</h5>
+				</div>
+			</div>
+
+			<div class="row" style="text-align: center;padding: 15px;padding-left:25px;">
+				<div class="col-xs-4">
+					<img src="contract.png" style="width:100px;height: 100px;text-align: left;" >
+				</div>
+				<div class="col-xs-4" style="width: 400px;text-align: left;">
+					<h4><b>Get your answer anytime anywhere</b></h4>
+					<h5>You don't need astrologer near you</h5>
+				</div>
+			</div>
+		</div>
+
+		<div class="row card-body justify-content-center" style="text-align: center;">
+			<div class="row" style="text-align: center;padding: 15px;padding-right: 25px;">
+				<div class="col-xs-4">
+					<img src="contract.png" style="width:100px;height: 100px;" >
+				</div>
+				<div class="col-xs-4 " style="width: 400px;text-align: left;">
+					<h4><b>Diversified services</b></h4>
+					<h5>Tarot, Vedic, Vastu, Palmism, Face reading and anything you need</h5>
+				</div>
+			</div>
+
+			<div class="row" style="text-align: center;padding: 15px;padding-left:25px;">
+				<div class="col-xs-4">
+					<img src="contract.png" style="width:100px;height: 100px;text-align: left;" >
+				</div>
+				<div class="col-xs-4 " style="width: 400px;text-align: left;">
+					<h4><b>100% Guarantee???</b></h4>
+					<h5>Verified and experience astrologersge</h5>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+	<div class="satisfaction card-body">
+		<h2 style="text-align:center"><b>100% Satisfaction guarantee </b></h2>
+		<h4>
+			<center>If you are not satisfied by your consultation. We promise you to refund and you can take another Guruji</center>
+		</h4>
+		<div class="row">
+			<div class="card-body col-md-6 col-lg-6">
+				<div class="media">
+					<img class="align-self-start mr-3" src="./girl.png" alt="Generic placeholder image">
+					<div class="media-body">
+						<h5 class="mt-0">Swatanwa Astro to <a class="export-btn" href="#">Exporu U</a></h5>
+						<div> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> August 25th 2021 </div>
+						<p>
+							Gave me a basic understanding of some key words sand phrases which I really like it！Gave me a basic understanding of some key words sand phrases which I really like it like it like it like it.</p>
+						<div> 
+							<button type="button" class="btn btn-sm btn-outline-secondary btn-rounded" data-mdb-ripple-color="dark">Toart</button>
+							<button type="button" class="btn btn-sm btn-outline-secondary btn-rounded" data-mdb-ripple-color="dark">Vedic</button>
+							<button type="button" class="btn btn-sm btn-outline-secondary btn-rounded" data-mdb-ripple-color="dark">Ancient HinduAstrology</button> 
+						</div>	
+					</div>
+				</div>
+			</div>
+			<div class="card-body col-md-6 col-lg-6">
+				<div class="media">
+					<img class="align-self-start mr-3" src="./girl.png" alt="Generic placeholder image">
+					<div class="media-body">
+						<h5 class="mt-0">Swatanwa Astro to <a class="export-btn" href="#">Exporu U</a></h5>
+						<div> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> August 25th 2021 </div>
+						<p>
+							Gave me a basic understanding of some key words sand phrases which I really like it！Gave me a basic understanding of some key words sand phrases which I really like it like it like it like it.</p>
+						<div> 
+							<button type="button" class="btn btn-sm btn-outline-secondary btn-rounded" data-mdb-ripple-color="dark">Toart</button>
+							<button type="button" class="btn btn-sm btn-outline-secondary btn-rounded" data-mdb-ripple-color="dark">Vedic</button>
+							<button type="button" class="btn btn-sm btn-outline-secondary btn-rounded" data-mdb-ripple-color="dark">Ancient HinduAstrology</button> 
+						</div>	
+					</div>
+				</div>
+			</div>
+			<div class="card-body col-md-6 col-lg-6">
+				<div class="media">
+					<img class="align-self-start mr-3" src="./girl.png" alt="Generic placeholder image">
+					<div class="media-body">
+						<h5 class="mt-0">Swatanwa Astro to <a class="export-btn" href="#">Exporu U</a></h5>
+						<div> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> August 25th 2021 </div>
+						<p>
+							Gave me a basic understanding of some key words sand phrases which I really like it！Gave me a basic understanding of some key words sand phrases which I really like it like it like it like it.</p>
+						<div> 
+							<button type="button" class="btn btn-sm btn-outline-secondary btn-rounded" data-mdb-ripple-color="dark">Toart</button>
+							<button type="button" class="btn btn-sm btn-outline-secondary btn-rounded" data-mdb-ripple-color="dark">Vedic</button>
+							<button type="button" class="btn btn-sm btn-outline-secondary btn-rounded" data-mdb-ripple-color="dark">Ancient HinduAstrology</button> 
+						</div>	
+					</div>
+				</div>
+			</div>
+			<div class="card-body col-md-6 col-lg-6">
+				<div class="media">
+					<img class="align-self-start mr-3" src="./girl.png" alt="Generic placeholder image">
+					<div class="media-body">
+						<h5 class="mt-0">Swatanwa Astro to <a class="export-btn" href="#">Exporu U</a></h5>
+						<div> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> August 25th 2021 </div>
+						<p>
+							Gave me a basic understanding of some key words sand phrases which I really like it！Gave me a basic understanding of some key words sand phrases which I really like it like it like it like it.</p>
+						<div> 
+							<button type="button" class="btn btn-sm btn-outline-secondary btn-rounded" data-mdb-ripple-color="dark">Toart</button>
+							<button type="button" class="btn btn-sm btn-outline-secondary btn-rounded" data-mdb-ripple-color="dark">Vedic</button>
+							<button type="button" class="btn btn-sm btn-outline-secondary btn-rounded" data-mdb-ripple-color="dark">Ancient HinduAstrology</button> 
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="card-body" style="text-align: center;background-color: #f5f5f5">
+		<h2><b>How it works</b></h2>
+		<div class="row">
+			<div class="col-lg-4">
+				<div>
+					<img src="image1.png" style="width: 250px;height: 250px;">
+				</div>
+				<div>
+					<h4><b>Find your Guruji</b></h4>
+					<div>Browse astrologers and check their skills, specialties and reviews. To find your destinated Guruji.</div>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div>
+					<img src="image2.png" style="width: 250px;height: 250px;">
+				</div>
+				<div>
+					<h4><b>Recharge for Consultation</b></h4>
+					<div>After recharge, you can have the new user offer: ₹5/min and MAX 6 mins duration.</div>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div>
+					<img src="image3.png" style="width: 250px;height: 250px;">
+				</div>
+				<div>
+					<h4><b>Solve problem with astrologers</b></h4>
+					<div>Call and Ask astrologers your problems.  By providing your birth chart, astrologer can help you get the answer.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="consultation card-body">
+		<h3><b>Start your first consultation ＠₹5/min</b></h3>
+
+		<div class="cardcontainer">
+			<div>
+				<a href="">
+					<div class="back"> <i class="fas fa-chevron-left"></i> </div>
+				</a>
+			</div>
+			<div class="card" style="width: 184px">
+				<div class="card-img-container">
+					<img class="card-img-top" src="./starrysky.png" alt="Card image cap">
+					<img class="person" src="./person.png" alt="">
+				</div>
+				<div class="card-body">
+					<div class="rating-score">
+						<p class="rating"> <i class="fas fa-star"></i> 4.7 (238 total) </p>
+					</div>
+					<h6 class="name">Swatanwa Astro</h6>
+					<p class="experience">10+ years</p>
+					<p class="language">Hindi,English,Gujilate</p>
+					₹20 <p style="display: inline;">/min</p>
+					<p style="display: inline;" class="original-price">22</p>
+
+					<p>Est time~12mins</p>
+				</div>
+			</div>
+			<div class="card" style="width: 184px">
+				<div class="card-img-container">
+					<img class="card-img-top" src="./starrysky.png" alt="Card image cap">
+					<img class="person" src="./person.png" alt="">
+				</div>
+				<div class="card-body">
+					<div class="rating-score">
+						<p class="rating"> <i class="fas fa-star"></i> 4.7 (238 total) </p>
+					</div>
+					<h6 class="name">Swatanwa Astro</h6>
+					<p class="experience">10+ years</p>
+					<p class="language">Hindi,English,Gujilate</p>
+					₹20 <p style="display: inline;">/min</p>
+					<p style="display: inline;" class="original-price">22</p>
+
+					<p>Est time~12mins</p>
+				</div>
+			</div>
+			<div class="card" style="width: 184px">
+				<div class="card-img-container">
+					<img class="card-img-top" src="./starrysky.png" alt="Card image cap">
+					<img class="person" src="./person.png" alt="">
+				</div>
+				<div class="card-body">
+					<div class="rating-score">
+						<p class="rating"> <i class="fas fa-star"></i> 4.7 (238 total) </p>
+					</div>
+					<h6 class="name">Swatanwa Astro</h6>
+					<p class="experience">10+ years</p>
+					<p class="language">Hindi,English,Gujilate</p>
+					₹20 <p style="display: inline;">/min</p>
+					<p style="display: inline;" class="original-price">22</p>
+
+					<p>Est time~12mins</p>
+				</div>
+			</div>
+			<div class="card" style="width: 184px">
+				<div class="card-img-container">
+					<img class="card-img-top" src="./starrysky.png" alt="Card image cap">
+					<img class="person" src="./person.png" alt="">
+				</div>
+				<div class="card-body">
+					<div class="rating-score">
+						<p class="rating"> <i class="fas fa-star"></i> 4.7 (238 total) </p>
+					</div>
+					<h6 class="name">Swatanwa Astro</h6>
+					<p class="experience">10+ years</p>
+					<p class="language">Hindi,English,Gujilate</p>
+					₹20 <p style="display: inline;">/min</p>
+					<p style="display: inline;" class="original-price">22</p>
+
+					<p>Est time~12mins</p>
+				</div>
+			</div>
+			<div class="see-more-button" style="width: 184px">
+				<a class="button" href="">See more <i class="fas fa-arrow-right"></i></a>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="card-body" style="text-align: center;background-color: #f5f5f5">
+		<h3><b>We protect the rights of users</b></h3>
+		<div class="card-body row">
+			<div class="col-lg-4">
+				<div>
+					<img src="wallet.png" style="width: 150px;height: 150px;">
+				</div>
+				<div class="card-body">
+					<span><b>Refund if unsatisfied</b></span>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div>
+					<img src="call-center.png" style="width: 150px;height: 150px;">
+				</div>
+				<div class="card-body">
+					<span><b>24 X 7 Customer support</b></span>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div>
+					<img src="agreement.png" style="width: 150px;height: 150px;">
+				</div>
+				<div class="card-body">
+					<span><b>100% quality guarantee</b></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="card-body" style="text-align: center;">
+		<h4><b>Astrotalk in News</b></h4>
+		<h5>Our Sucess stories in Media Headlines and lots of Encouragement</h5>
+		<div class="card-body row">
+			<div class="col-lg-2">
+				<div class="card">
+					<div>
+						<img src="./tedx.jpg" style="width: 75px;height: 50px;">
+					</div>
+					<div>
+						<span>
+							<i class="fa fa-trophy" aria-hidden="true"></i> Jan 7 , 2021
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="card">
+					<div>
+						<img src="./daily_hunt.png" style="width: 75px;height: 50px;">
+					</div>
+					<div>
+						<span>
+							<i class="fa fa-trophy" aria-hidden="true"></i> Jan 7 , 2021
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="card">
+					<div>
+						<img src="./YourStory.jpg" style="width: 75px;height: 50px;">
+					</div>
+					<div>
+						<span>
+							<i class="fa fa-trophy" aria-hidden="true"></i> Jan 7 , 2021
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="card">
+					<div>
+						<img src="./tedx.jpg" style="width: 75px;height: 50px;">
+					</div>
+					<div>
+						<span>
+							<i class="fa fa-trophy" aria-hidden="true"></i> Jan 7 , 2021
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="card">
+					<div>
+						<img src="./daily_hunt.png" style="width: 75px;height: 50px;">
+					</div>
+					<div>
+						<span>
+							<i class="fa fa-trophy" aria-hidden="true"></i> Jan 7 , 2021
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="card">
+					<div>
+						<img src="./YourStory.jpg" style="width: 75px;height: 50px;">
+					</div>
+					<div>
+						<span>
+							<i class="fa fa-trophy" aria-hidden="true"></i> Jan 7 , 2021
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-body row">
+			<div class="col-lg-2">
+				<div class="card">
+					<div>
+						<img src="./tedx.jpg" style="width: 75px;height: 50px;">
+					</div>
+					<div>
+						<span>
+							<i class="fa fa-trophy" aria-hidden="true"></i> Jan 7 , 2021
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="card">
+					<div>
+						<img src="./daily_hunt.png" style="width: 75px;height: 50px;">
+					</div>
+					<div>
+						<span>
+							<i class="fa fa-trophy" aria-hidden="true"></i> Jan 7 , 2021
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="card">
+					<div>
+						<img src="./YourStory.jpg" style="width: 75px;height: 50px;">
+					</div>
+					<div>
+						<span>
+							<i class="fa fa-trophy" aria-hidden="true"></i> Jan 7 , 2021
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="card">
+					<div>
+						<img src="./tedx.jpg" style="width: 75px;height: 50px;">
+					</div>
+					<div>
+						<span>
+							<i class="fa fa-trophy" aria-hidden="true"></i> Jan 7 , 2021
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="card">
+					<div>
+						<img src="./daily_hunt.png" style="width: 75px;height: 50px;">
+					</div>
+					<div>
+						<span>
+							<i class="fa fa-trophy" aria-hidden="true"></i> Jan 7 , 2021
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="card">
+					<div>
+						<img src="./YourStory.jpg" style="width: 75px;height: 50px;">
+					</div>
+					<div>
+						<span>
+							<i class="fa fa-trophy" aria-hidden="true"></i> Jan 7 , 2021
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="card-body container container-image container-fluid">
+		<img src="last_div.jpg" alt="Snow" style="height: 400px;width: 100%;">
+		<div class="centered centered-image"><h1><b>What are you waiting for?</b></h1></div>
+		<div class="centered centered-image-2">
+			<button type="button" class="btn btn-light btn-lg" data-mdb-ripple-color="dark">Talk Now</button>
+		</div>
+	</div>
+		
+
+</body>
+
+</html>
